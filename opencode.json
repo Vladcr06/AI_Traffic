@@ -1,0 +1,45 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "WA": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "WA (local)",
+      "options": {
+        "baseURL": "https://llm-proxy-mllab.wavea.cc/v1",
+        "apiKey": "{file:C:\\Users\\User\\Desktop\\МОЕ\\Ключ для OpenCode\\key.txt}"
+      },
+      "models": {
+        "cyankiwi/Qwen3.6-35B-A3B-AWQ-4bit": {
+          "name": "Qwen3.6/35B-A3B",
+          "limit": {
+            "context": 262144,
+            "output": 32768
+          }
+        },
+        "cyankiwi/MiniMax-M2.7-AWQ-4bit": {
+          "name": "MiniMaxAI/MiniMax-M2.7",
+          "limit": {
+            "context": 204800,
+            "output": 32768
+          },
+          "context_window_fallback": "cyankiwi/Qwen3.6-35B-A3B-AWQ-4bit"
+        }
+      }
+    }
+  },
+  "permission": {
+    "bash": "allow",
+    "edit": "allow",
+    "webfetch": "allow"
+  },
+  "plugin": [
+    "superpowers@git+https://github.com/obra/superpowers.git"
+  ],
+  "lsp": {
+    "basedpyright": {
+      "command": ["basedpyright-langserver", "--stdio"],
+      "extensions": [".py", ".pyi"]
+    }
+  },
+  "autoupdate": "notify"
+}
