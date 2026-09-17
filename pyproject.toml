@@ -5,9 +5,12 @@ description = ""
 authors = [
     {name = "Vlad Chernoprudov",email = "vlad.chernoprudov@waveaccess.global"}
 ]
-requires-python = ">=3.11"
+requires-python = ">=3.12,<4"
 dependencies = [
-    "pandas (>=3.0.3,<4.0.0)"
+    "pandas (>=3.0.3,<4.0.0)",
+    "scipy (>=1.18.0,<2.0.0)",
+    "scikit-learn (>=1.9.0,<2.0.0)",
+    "scapy (>=2.7.0,<3.0.0)"
 ]
 
 
